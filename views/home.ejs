@@ -1,19 +1,21 @@
 <%- include("partials/header") -%>
+<div class="content flex-content">
 
-<h1>Home</h1>
-
-<p><%= startingContent.substr(0,100) +"..."; %> <a href="post/home">Read more</a></p>
-
-
-<% for(var i = 0; i < homeContent.length; i++){ %>
-  <h1>
-    <%= homeContent[i].title; %>
+<% if(homeContent !== null){ %>
+<% homeContent.forEach((content)=>{ %>
+  <a class="avant-link" href=<%=content.link%>>
+  <div class="avant">
+  <h1 class="avant-color">
+    <%= content.title; %>
   </h1>
 
   <p>
-  <%= homeContent[i].message.substr(0,100) +"..."; %>
-  <a href=<%= homeContent[i].link%>>Read more</a>
+  <%= content.message.substr(0,100) +"..."; %>
   </p>
-<% } %>
+</div>
+</a>
 
+<% }); %>
+<% } %>
+</div>
 <%- include("partials/footer") -%>

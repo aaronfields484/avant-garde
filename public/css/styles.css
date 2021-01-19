@@ -1,3 +1,134 @@
+html {
+    position: relative;
+    min-height: 100vh;
+}
+
+
+.heading-form{
+    font-size: 2.5rem;
+    font-family: 'Forum', cursive;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000000;
+    word-wrap: none;
+}
+
+hr {
+    margin-top: 0;
+    line-height: 0.025;
+    background-color: black;
+    height: 0.01px;
+    width: 4rem;
+}
+
+.navbar-toggler {
+    border: none;
+
+}
+
+.navbar-toggler:focus{
+    border: none;
+}
+
+@media screen and (max-width: 760px){
+    .content {
+        padding-top: 25vw !important;
+        padding-bottom: 25vw !important;
+
+    }
+
+    .content h1 {
+        text-align: center;
+    }
+
+    .content-div {
+        display: block !important;
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .collapse-items {
+        top: 98.433735%;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+        width: 0;
+        background-color: rgba(108, 117, 125, 0.90);
+        height: 100vh;
+        transition: all 0.5s ease-out;
+       
+    }
+    .collapse-items li {
+        margin: 20% 96.2%;
+    }
+    .nav-item a {
+        font-weight: bold;
+        color: white !important;
+        text-align: center;
+    }
+
+    .collapse-items.opennav {
+        display: flex !important;
+        width: 70vw !important;
+    
+    }
+
+    .switchoff {
+        display: none;
+    }
+
+}
+
+
+form {
+    text-align: left;
+}
+.form-group{
+    max-width: 60vh;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    border-radius: 0.5rem;
+    margin: 6.25rem auto;
+    padding: 100px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+    .form-group {
+        width: 100%;
+        padding: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+    .form-group {
+        width: 100%;
+        padding: 25px;
+    }
+
+}
+
+input {
+    margin: 10px auto;
+    width: 100%;
+    display: block;
+}
+
+.form-link {
+    margin-top: 20px;
+    color: #6c757d;
+    text-decoration: underline;
+    text-decoration-color: #6c757d;
+}
+
+a:hover{
+    color: black;
+}
+
+
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -10,27 +141,135 @@
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    box-shadow: 0 8px 6px -6px black;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
 }
 
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+navbar li {
+    font-family: 'Jost', sans-serif;
+
 }
 
-.footer-padding {
-	padding-bottom: 60px;
+.content {
+    padding-top: 10%;
+    margin-bottom: 100px;
+}
+
+.flex-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.avant {
+    width: 20rem;
+    height: 18rem;
+    background-color:white;
+    padding-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    border-radius: 0.5rem;
+    margin: 6.25rem auto;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.avant:hover {
+    box-shadow: 10px 15px 20px rgba(108, 117, 125, 0.90);
+    transform: scale(1.05, 1.05);
+    transition: all 0.15s ease-in-out;
+}
+
+a:hover.avant-link {
+    text-decoration: none !important;
+    
+}
+
+.avant h1 {
+    font-size: 2rem;
+    padding: 20px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    text-align: center;
+    background-color: rgba(108, 117, 125, 0.90);
+    border-width: 20rem !important;
+    color: black;
+}
+
+.avant p {
+    padding: 20px;
+    color: black;
 }
 
 .footer {
-	position: absolute;
+    position: absolute;
+    bottom: 0;
 	text-align: center;
-	bottom: 0;
 	width: 100%;
 	height: 60px;
 	background-color: #bebeb9;
 }
 
 .footer p {
-	margin-top: 25px;
-	font-size: 12px;
-  color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -40%);
+	font-size: 1rem;
+    color: #fff;
+}
+
+.navbar-brand{
+    margin-top: 0;
+    padding-bottom: 0;
+}
+
+.landing-img {
+    background-image: url("../img/background.jpg");
+    width: 100%;
+    height: 100vh;
+    background-position: center; 
+     background-repeat: no-repeat; 
+    background-size: cover; 
+    filter: blur(2px);
+    z-index: -1;
+}
+
+
+.landing-info{
+position: relative;
+color: white;
+font-weight: bold;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+width: 80%;
+padding: 20px;
+text-align: center;
+}
+
+
+.heading{
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'Forum', cursive;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+
+button {
+    z-index: 2;
+    width: 100px;
+    margin-top: 15px;
+}
+
+.content-div {
+    display: none;
 }
