@@ -42,7 +42,7 @@ app.use(express.static("public"));
 
 
 //DB Connection
-mongoose.connect('mongodb+srv://admin:Dudeman$484@cluster0.xefat.mongodb.net/?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(`mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@cluster0.xefat.mongodb.net/?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 
