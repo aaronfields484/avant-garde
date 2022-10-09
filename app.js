@@ -4,7 +4,8 @@ const bodyParser = require("body-parser");
 const _ = require("lodash");
 const ejs = require("ejs");
 
-require('dotenv').config()
+require('dotenv').config();
+const port = process.env.PORT || 3000;
 
 //Mongoose
 const mongoose = require("mongoose");
@@ -217,6 +218,6 @@ else{
 });
 
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
   console.log("Server started");
 });
